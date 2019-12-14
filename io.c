@@ -28,7 +28,7 @@
  * SUCH DAMAGE.
  */
 
-#include <regex.h>
+#include <pcre2posix.h>
 #include <signal.h>
 #include <stdio.h>
 #include <stdlib.h>

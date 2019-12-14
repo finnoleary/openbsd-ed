@@ -50,7 +50,7 @@
 #include <errno.h>
 #include <limits.h>
 #include <pwd.h>
-#include <regex.h>
+#include <pcre2posix.h>
 #include <setjmp.h>
 #include <signal.h>
 #include <stdio.h>

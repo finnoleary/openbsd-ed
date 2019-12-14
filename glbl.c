@@ -32,7 +32,7 @@
 #include <sys/ioctl.h>
 #include <sys/wait.h>
 
-#include <regex.h>
+#include <pcre2posix.h>
 #include <signal.h>
 #include <stdio.h>
 #include <stdlib.h>

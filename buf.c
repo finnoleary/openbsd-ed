@@ -33,7 +33,7 @@
 #include <sys/stat.h>
 
 #include <limits.h>
-#include <regex.h>
+#include <pcre2posix.h>
 #include <signal.h>
 #include <stdlib.h>
 #include <stdio.h>

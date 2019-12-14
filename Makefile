@@ -5,7 +5,7 @@ PROG=	 ed
 SRCS=	 bsdcompat.c buf.c glbl.c io.c main.c re.c sub.c undo.c
 
 build:
-	gcc $(SRCS) -o $(PROG)
+	gcc $(SRCS) -o $(PROG) -lpcre2-posix -lpcre2-8
 
 install: build
 	mkdir -p $(DESTDIR)$(PREFIX)/bin

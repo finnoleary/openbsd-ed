@@ -31,7 +31,7 @@
  */
 
 #include <limits.h>
-#include <regex.h>
+// #include <pcre2posix.h>
 #include <signal.h>
 
 #include <strings.h>
