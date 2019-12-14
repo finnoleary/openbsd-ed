@@ -1,0 +1,37 @@
+$?????: README,v 1.5 2019/12/13 04:31:22 finnoleary Exp $
+$OpenBSD: README,v 1.5 2018/06/15 08:46:24 martijn Exp $
+$NetBSD: README,v 1.9 1995/03/21 09:04:33 cgd Exp $
+
+ed is an 8-bit-clean, POSIX-compliant line editor.  It should work with
+any regular expression package that conforms to the POSIX interface
+standard, such as GNU regex(3).
+
+If reliable signals are supported (e.g., POSIX sigaction(2)), it should
+compile with little trouble.  Otherwise, the macros SPL1() and SPL0()
+should be redefined to disable interrupts.
+
+The file `POSIX' describes extensions to and deviations from the POSIX
+standard.
+
+The ./test directory contains regression tests for ed. The README
+file in that directory explains how to run these.
+
+For a description of the ed algorithm, see Kernighan and Plauger's book
+"Software Tools in Pascal," Addison-Wesley, 1981.
+
+---
+
+This version was forked from commit 14a6528f603d0f6b3ec1246547f79ecd72819c70
+at 2019-12-13T04:28Z by finnoleary@inventati.org and edited to compile on and
+work with GNU Libc systems. This was a hasty snarf 'n edit, but feel free to
+mail me with any problems you encounter. The changes made were:
+
+- Added bsdcompat{.c,.h} with the BSD functions required
+- Added #include "bsdcompat.h" to ed.h
+- Altered Makefile to compile the program without needing includes from the
+  OpenBSD build system
+
+Please note that test/ and USD.doc/ have not been tested, although they
+shouldn't be too difficult to get running. Also compiling with -Wall -Werror is
+a bad idea, it would require adding more BSD functions, this is minimal
+effort :)
